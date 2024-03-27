@@ -16,8 +16,8 @@ const Layout: React.FC<LayoutProps> = ({ titleText, imgUrl, alt, text }) => {
                 <h1 className={css({ fontSize: "2xl", fontWeight: "bold", width: "100%", backgroundColor: "#f4f4f4", textAlign: "center", borderRadius: "5" })}>{titleText}</h1>
                 <Image src={imgUrl} width={100} height={100} alt={alt} />
                 {/* <Image src="/images/page1.jpg" width={1} height={100} alt="Illustration du paragraphe" className={css({})} /> */}
-                {text.map(element => {
-                    return <p className={css({ backgroundColor: "#f4f4f4", padding: "5", borderRadius: "5" })}>{element}</p>
+                {text.map((element, id) => {
+                    return <p className={css({ backgroundColor: "#f4f4f4", padding: "5", borderRadius: "5" })} key={id}>{element}</p>
                 })}
             </section >
         </>
