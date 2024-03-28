@@ -12,6 +12,24 @@ const globalCss = defineGlobalStyles({
 
 export default defineConfig({
     globalCss,
+
+    // theme
+    theme: {
+        // 👇🏻 Define your tokens here
+        extend: {
+            tokens: {
+                colors: {
+                    primary: { value: '#fff' },
+                    secondary: { value: '#f4f4f4' },
+                    mainBlue: { value: '#242f5b' },
+                    mainYellow: { value: '#f1b431' }
+                },
+                shadows: {
+                    card: { value: '2px 4px 12px #00000014' }
+                }
+            }
+        }
+    },
     // Whether to use css reset
     preflight: true,
 
