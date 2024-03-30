@@ -52,22 +52,6 @@ const Footer: React.FC = () => {
         }
     }
 
-    useEffect(() => {
-        // Lancer la lecture de l'audio lors du montage du composant
-        if (audio) {
-            audio.play();
-            console.log('ici')
-        } else {
-            console.log('euh là')
-            const newAudio = new Audio('/audio/fr.mp3')
-            newAudio.play();
-            setAudio(newAudio);
-        }
-    }, [audio]);
-
-
-
-
     return (
         <footer className={css({ backgroundColor: "mainBlue", height: "60px", display: "flex", justifyContent: "space-around", color: "mainYellow", borderTop: "1px solid token(colors.mainYellow)", alignItems: "center" })}>
             <Link href={prevPageNumber}>
