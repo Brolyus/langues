@@ -17,6 +17,13 @@ export default function Home() {
     setAudio(newAudio);
   };
 
+  const stopAudio = () => {
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }
+
   return (
     <div className={css({ font: 'arial', flexDirection: 'column', alignItems: 'center', color: 'mainWhite', fontSize: "2xl", fontWeight: 'bold', backgroundColor: '#1f1e23', width: '100%', display: 'flex', justifyContent: 'space-around' })}>
       <div className={css({ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' })}>
@@ -37,7 +44,7 @@ export default function Home() {
       <p className={css({ width: '100%', color: 'mainBlack', backgroundColor: 'mainWhite', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' })} onClick={() => playAudio('/audio/ca.mp3')}>Lup negru</p>
       <p className={css({ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' })} onClick={() => playAudio('/audio/fr.mp3')}>varge svart</p>
       <Link href='/1' className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'secondGreen', fontSize: 'md', padding: '3', backgroundColor: 'mainGreen', width: '200px', border: '1px solid token(colors.mainGreen)', position: 'fixed', top: 'calc(100% - 100px)', zIndex: '10', borderRadius: '5px' })}>
-        <button>Demarrer l&apos;histoire</button>
+        <button onClick={() => stopAudio()}>Demarrer l&apos;histoire</button>
       </Link>
     </div>
   )
