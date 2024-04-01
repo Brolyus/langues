@@ -24,7 +24,9 @@ export default defineConfig({
                     mainBlue: { value: '#242f5b' },
                     mainYellow: { value: '#f1b431' },
                     mainBlack: { value: '#1f1e23'},
-                    mainWhite: { value: '#fafafa'}
+                    mainWhite: { value: '#fafafa'},
+                    mainGreen: { value: '#47B30D'},
+                    secondGreen: { value: '#1B6925'}
                 },
                 shadows: {
                     card: { value: '2px 4px 12px #00000014' }
