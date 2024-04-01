@@ -37,7 +37,7 @@ export default function Home() {
       <p className={css({ width: '100%', color: 'mainBlack', backgroundColor: 'mainWhite', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' })} onClick={() => playAudio('/audio/ca.mp3')}>Lup negru</p>
       <p className={css({ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' })} onClick={() => playAudio('/audio/fr.mp3')}>varge svart</p>
       <Link href='/1' className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'secondGreen', fontSize: 'md', padding: '3', backgroundColor: 'mainGreen', width: '200px', border: '1px solid token(colors.mainGreen)', position: 'fixed', top: 'calc(100vh - 100px)', zIndex: '10', borderRadius: '5px' })}>
-        <button>Demarrer l'histoire</button>
+        <button>Demarrer l&apos;histoire</button>
       </Link>
     </div>
   )
