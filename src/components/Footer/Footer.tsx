@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
             console.log('ici')
         } else {
             console.log('euh là')
-            const newAudio = new Audio('/audio/fr.mp3')
+            const newAudio = new Audio('/audio/1.anglais.mp3')
             newAudio.play();
             setAudio(newAudio);
         }
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
             <Link href={prevPageNumber}>
                 <Arrow className={css({ color: "mainYellow !important", fill: 'mainYellow', transform: 'scaleX(-1)' })} onClick={() => stopAudio()} />
             </Link>
-            <button className={css({ fontSize: '2xl' })} onClick={() => playAudio('/audio/fr.mp3')}>
+            <button className={css({ fontSize: '2xl' })} onClick={() => playAudio('/audio/1.anglais.mp3')}>
                 &#127467;&#127479;
             </button>
             <button className={css({ fontSize: '2xl' })} onClick={() => playAudio('/audio/ca.mp3')}>&#127477;&#127481;</button>
