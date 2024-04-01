@@ -22,7 +22,9 @@ export default defineConfig({
                     primary: { value: '#fff' },
                     secondary: { value: '#f4f4f4' },
                     mainBlue: { value: '#242f5b' },
-                    mainYellow: { value: '#f1b431' }
+                    mainYellow: { value: '#f1b431' },
+                    mainBlack: { value: '#1f1e23'},
+                    mainWhite: { value: '#fafafa'}
                 },
                 shadows: {
                     card: { value: '2px 4px 12px #00000014' }
