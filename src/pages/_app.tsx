@@ -2,8 +2,6 @@ import '../styles/globals.css'
 import { css } from '../../styled-system/css';
 import type { AppProps } from 'next/app'
 import type { Metadata } from "next";
-import Footer from '@/components/Footer/Footer';
-
 
 export const metadata: Metadata = {
   title: "Une histoire, des langues",
@@ -14,7 +12,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={css({ height: "100%" })}>
       <Component {...pageProps} />
-      <Footer />
     </main>
   );
 }
