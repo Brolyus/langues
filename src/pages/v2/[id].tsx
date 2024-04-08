@@ -1,11 +1,31 @@
 import Layout from '@/components/Layout/Layout';
-export default function Page2() {
-    return (
-        <Layout
-            titleText={'Hello page 2 🦦!'}
-            imgUrl={'/images/page2.jpg'}
-            alt={'Illustration du paragraphe'}
-            text={['Alex va dans la forêt. C’est le soir parce qu’il fait tout noir.', 'Ça fait peur d’aller dans la forêt parce qu’il y a le loup, le serpent, le bruit des arbres.']}
-        />
-    )
+import data from '@/tools/data.json'
+
+
+export async function getStaticPaths() {
+  const paths = data.map((element: any) => ({
+    params: { id: element.page },
+  }))
+
+  // { fallback: false } means other routes should 404
+  return { paths, fallback: false }
+}
+export async function getStaticProps(params: any) {
+  return {
+    props: {
+      data: data[params.params.id - 1]
+    },
+  }
+}
+
+export default function Page(data: any) {
+  data = data.data
+  return (
+    <Layout
+      titleText={data.title}
+      imgUrl={`/images/${data.image}`}
+      alt={data.alt}
+      text={data.text}
+    />
+  )
 }
