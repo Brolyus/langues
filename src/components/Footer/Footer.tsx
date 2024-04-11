@@ -6,15 +6,18 @@ import { usePathname } from 'next/navigation'
 
 const Footer: React.FC = () => {
     const pathname = usePathname()
-
+    const maxPageNumber = 17
 
     const currentPageNumber = pathname === '/' ? 0 : parseInt(pathname.replace('/', ''), 10)
+
+    const isLastPage = currentPageNumber === maxPageNumber
+
     let nextPageNumber
     switch (currentPageNumber) {
         case 0:
             nextPageNumber = '/1';
             break;
-        case 6:
+        case maxPageNumber:
             nextPageNumber = '/';
             break;
         default:
@@ -24,7 +27,7 @@ const Footer: React.FC = () => {
     let prevPageNumber
     switch (currentPageNumber) {
         case 0:
-            prevPageNumber = '/6';
+            prevPageNumber = '/17';
             break;
         case 1:
             prevPageNumber = '/';
@@ -62,7 +65,12 @@ const Footer: React.FC = () => {
             </button>
             <button className={css({ fontSize: '2xl' })} onClick={() => playAudio('/audio/ca.mp3')}>&#127477;&#127481;</button>
             <Link href={nextPageNumber}>
-                <Arrow className={css({ color: "mainBlack", fill: 'mainBlack' })} onClick={() => stopAudio()} />
+                {
+                    isLastPage ?
+                        <p>Fin</p>
+                        :
+                        <Arrow className={css({ color: "mainBlack", fill: 'mainBlack' })} onClick={() => stopAudio()} />
+                }
             </Link>
         </footer>
     )
