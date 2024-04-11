@@ -52,9 +52,6 @@ const Footer: React.FC = () => {
         }
     }
 
-
-
-
     return (
         <footer className={css({ backgroundColor: "mainWhite", height: "60px", display: "flex", justifyContent: "space-around", color: "mainBlack", borderTop: "1px solid token(colors.mainBlack)", alignItems: "center" })}>
             <Link href={prevPageNumber}>
