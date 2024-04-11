@@ -1,0 +1,46 @@
+[
+    {
+        "page": "1",
+        "image": "1.jpg",
+        "alt": "desc",
+        "audio": "1.mp3",
+        "title": "Page 1",
+        "next": 2,
+        "prev": 0,
+        "text": ["Une personne marche doucement sur la neige. Il y a du vent, l’écharpe vole."],
+        "foreignLanguage": "english"
+    },
+    {
+        "page": "2",
+        "image": "2.jpg",
+        "alt": "desc",
+        "audio": "2.mp3",
+        "title": "Page 2",
+        "next": 3,
+        "prev": 1,
+        "text": ["Alex va dans la forêt. C’est le soir parce qu’il fait tout noir. Ça fait peur d’aller dans la forêt parce qu’il y a le loup, le serpent, le bruit des arbres."],
+        "foreignLanguage": "italian"
+    },
+    {
+        "page":"3",
+        "image": "3.jpg",
+        "alt": "desc",
+        "audio": "3.mp3",
+        "title": "Page 3",
+        "next": 4,
+        "prev": 2,
+        "text": ["Text de test pour la page 3"],
+        "foreignLanguage": "arab"
+    },
+    {
+        "page": "4",
+        "image": "4.jpg",
+        "alt": "desc",
+        "audio": "4.mp3",
+        "title": "Page 4",
+        "next": 5,
+        "prev": 3,
+        "text": ["Page et texte de test pour formuler la page 4"],
+        "foreignLanguage": "portuguese"
+    }
+]
