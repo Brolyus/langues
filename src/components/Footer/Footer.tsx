@@ -4,7 +4,13 @@ import Arrow from '../Arrow/Arrow'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-const Footer: React.FC = () => {
+interface FooterProps {
+    foreignLanguage: string
+    iso: string
+    frenchAudio: string
+}
+
+const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) => {
     const pathname = usePathname()
     const maxPageNumber = 17
 
@@ -60,10 +66,10 @@ const Footer: React.FC = () => {
             <Link href={prevPageNumber}>
                 <Arrow className={css({ color: "mainBlack", fill: 'mainBlack', transform: 'scaleX(-1)' })} onClick={() => stopAudio()} />
             </Link>
-            <button className={css({ fontSize: '2xl' })} onClick={() => playAudio('/audio/1.anglais.mp3')}>
-                &#127467;&#127479;
+            <button className={css({ fontSize: '2xl' })} onClick={() => playAudio(`/audio/${foreignLanguage}.mp3`)}>
+                { }
             </button>
-            <button className={css({ fontSize: '2xl' })} onClick={() => playAudio('/audio/ca.mp3')}>&#127477;&#127481;</button>
+            <button className={css({ fontSize: '2xl' })} onClick={() => playAudio(`${frenchAudio}`)}>&#127467;&#127479;</button>
             <Link href={nextPageNumber}>
                 {
                     isLastPage ?
