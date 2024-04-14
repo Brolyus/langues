@@ -8,7 +8,9 @@
         "next": 2,
         "prev": 0,
         "text": ["Une personne marche doucement sur la neige. Il y a du vent, l’écharpe vole."],
-        "foreignLanguage": "english"
+        "foreignLanguage": "english",
+        "frenchAudio": "1.français",
+        "flag": "GB"
     },
     {
         "page": "2",
@@ -19,7 +21,9 @@
         "next": 3,
         "prev": 1,
         "text": ["Alex va dans la forêt. C’est le soir parce qu’il fait tout noir.","Ça fait peur d’aller dans la forêt parce qu’il y a le loup, le serpent, le bruit des arbres."],
-        "foreignLanguage": "italian"
+        "foreignLanguage": "italian",
+        "frenchAudio": "1.français",
+        "flag": "IT"
     },
     {
         "page":"3",
@@ -30,7 +34,9 @@
         "next": 4,
         "prev": 2,
         "text": ["S’il n’y avait pas les arbres, on se croirait sur la lune.", "Alex joue avec la neige."],
-        "foreignLanguage": "gaelic"
+        "foreignLanguage": "gaelic",
+        "frenchAudio": "1.français",
+        "flag": "IE"
     },
     {
         "page": "4",
@@ -41,7 +47,9 @@
         "next": 5,
         "prev": 3,
         "text": ["Il fait très froid. Il y a de la fumée quand il respire. Alex met sa main dans sa poche. Il est parti chercher son chien, Inou.", "Il porte une sacoche. Dans la sacoche, il y a son téléphone, une lampe torche, de l’eau, de l’argent et de la nourriture pour son chien.", "Il rêve d’un bain chaud. Il n’a personne avec qui parler. Il parle dans sa tête : « Est-ce que je peux dormir ici ? » Il veut regarder les étoiles. Il est très fatigué parce qu’il a beaucoup marché, c’est pour ça qu’il veut dormir."],
-        "foreignLanguage": "arab"
+        "foreignLanguage": "arab",
+        "frenchAudio": "1.français",
+        "flag": "DZ"
     },
     {
         "page":"5",
@@ -52,7 +60,9 @@
         "next": 6,
         "prev": 4,
         "text": ["Alex est perdu. Il est en train de regarder le ciel. Il vient de rentrer dans la forêt, il est sous les arbres. Derrière les arbres, il y a des yeux qui se cachent.", "Le loup est en train de l’observer.","Le loup est fâché. C’est le gardien de la forêt."],
-        "foreignLanguage": "kabyl"
+        "foreignLanguage": "kabyl",
+        "frenchAudio": "1.français",
+        "flag": "DZ"
     },
     {
         "page":"6",
@@ -63,7 +73,9 @@
         "next": 4,
         "prev": 2,
         "text": ["Le loup s’approche. Il est en train de suivre le garçon pour l’attaquer. Il a senti la nourriture dans la poche du garçon."],
-        "foreignLanguage": "Hindi"
+        "foreignLanguage": "hindi",
+        "frenchAudio": "1.français",
+        "flag": "IN"
     },
     {
         "page":"7",
@@ -74,7 +86,9 @@
         "next": 4,
         "prev": 2,
         "text": ["Le garçon ne sait pas qu’il est suivi. Il n’a pas vu le loup, donc il ne court pas."],
-        "foreignLanguage": "swedish"
+        "foreignLanguage": "swedish",
+        "frenchAudio": "1.français",
+        "flag": "SE"
     },
     {
         "page":"8",
@@ -85,7 +99,9 @@
         "next": 4,
         "prev": 2,
         "text": ["Alex tend la main pour attraper la neige parce qu’il veut jouer, mais la neige fond dans sa main."],
-        "foreignLanguage": "polish"
+        "foreignLanguage": "polish",
+        "frenchAudio": "1.français",
+        "flag": "PL"
     },
     {
         "page":"9",
@@ -96,7 +112,9 @@
         "next": 4,
         "prev": 2,
         "text": ["La chouette regarde le garçon avec des yeux méchants. C’est le soir et Alex dans la forêt fait du bruit. La chouette est fâchée contre lui parce que, à cause de lui, les animaux se sont échappés, ils ont eu peur, et la chouette n’a rien à manger."],
-        "foreignLanguage": "spanish"
+        "foreignLanguage": "spanish",
+        "frenchAudio": "1.français",
+        "flag": "ES"
     },
     {
         "page":"10",
@@ -107,7 +125,9 @@
         "next": 4,
         "prev": 2,
         "text": ["Alex continue de marcher. Il marche difficilement à cause de la neige. La neige tombe de plus en plus vite."],
-        "foreignLanguage": "spanish"
+        "foreignLanguage": "spanish",
+        "frenchAudio": "1.français",
+        "flag": "ES"
     },
     {
         "page":"11",
@@ -118,7 +138,9 @@
         "next": 4,
         "prev": 2,
         "text": ["Les yeux du loup sont énervés. Il regarde le garçon méchamment.","Le loup n’est pas méchant, il veut juste défendre la forêt en attaquant les gens qui rentrent dans la forêt.","Le loup s’approche du garçon… à pas de loup."],
-        "foreignLanguage": "portuguese"
+        "foreignLanguage": "portuguese",
+        "frenchAudio": "1.français",
+        "flag": "PT"
     },
     {
         "page":"12",
@@ -129,7 +151,9 @@
         "next": 4,
         "prev": 2,
         "text": ["Alex marche en écoutant les animaux : la chouette et le hibou, l’ours et l’écureuil."],
-        "foreignLanguage": "german"
+        "foreignLanguage": "german",
+        "frenchAudio": "1.français",
+        "flag": "DE"
     },
     {
         "page":"13",
@@ -140,7 +164,9 @@
         "next": 4,
         "prev": 2,
         "text": ["Le loup est en colère. On voit ses dents. Il gronde."],
-        "foreignLanguage": "bulgarian"
+        "foreignLanguage": "bulgarian",
+        "frenchAudio": "1.français",
+        "flag": "BG"
     },
     {
         "page":"14",
@@ -151,7 +177,9 @@
         "next": 4,
         "prev": 2,
         "text": ["Alex s’est retourné parce qu’il a entendu le loup. Il a peur, il est surpris.","Le loup saute sur le garçon. Le garçon est attaqué."],
-        "foreignLanguage": "creol"
+        "foreignLanguage": "creol",
+        "frenchAudio": "1.français",
+        "flag": "CV"
     },
     {
         "page":"15",
@@ -162,7 +190,9 @@
         "next": 4,
         "prev": 2,
         "text": ["Ce n’est pas un loup mais Inou ! Il a sauvé Alex parce que l’arbre vient de tomber. Les branches sont éparpillées au sol."],
-        "foreignLanguage": "catalan"
+        "foreignLanguage": "catalan",
+        "frenchAudio": "1.français",
+        "flag": "ES"
     },
     {
         "page":"16",
@@ -173,7 +203,9 @@
         "next": 4,
         "prev": 2,
         "text": ["La chouette s’envole. Alex remercie Inou."],
-        "foreignLanguage": "romanian"
+        "foreignLanguage": "romanian",
+        "frenchAudio": "1.français",
+        "flag": "RO"
     },
     {
         "page":"17",
@@ -184,6 +216,8 @@
         "next": 4,
         "prev": 2,
         "text": ["Son chien l’a sauvé. Alex lui fait un câlin. Inou est content."],
-        "foreignLanguage": "takitaki"
+        "foreignLanguage": "takitaki",
+        "frenchAudio": "1.français",
+        "flag": "GF"
     }
 ]

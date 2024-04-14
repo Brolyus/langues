@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Arrow from '../Arrow/Arrow'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill"
 
 interface FooterProps {
     foreignLanguage: string
@@ -33,7 +34,7 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
     let prevPageNumber
     switch (currentPageNumber) {
         case 0:
-            prevPageNumber = '/17';
+            prevPageNumber = `/${maxPageNumber}`;
             break;
         case 1:
             prevPageNumber = '/';
@@ -61,15 +62,29 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
         }
     }
 
+    const isoToEmoji = (isoCode: string) => {
+        return isoCode
+            .split('')
+            .map(letter => letter.charCodeAt(0) % 32 + 0x1F1E5)
+            .map(n => String.fromCodePoint(n))
+            .join('')
+    }
+
+    useEffect(() => {
+        polyfillCountryFlagEmojis()
+    }, [])
+
     return (
         <footer className={css({ backgroundColor: "mainWhite", height: "60px", display: "flex", justifyContent: "space-around", color: "mainBlack", borderTop: "1px solid token(colors.mainBlack)", alignItems: "center" })}>
             <Link href={prevPageNumber}>
                 <Arrow className={css({ color: "mainBlack", fill: 'mainBlack', transform: 'scaleX(-1)' })} onClick={() => stopAudio()} />
             </Link>
-            <button className={css({ fontSize: '2xl' })} onClick={() => playAudio(`/audio/${foreignLanguage}.mp3`)}>
-                { }
+            <button className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })} onClick={() => playAudio(`/audio/${foreignLanguage}.mp3`)}>
+                {isoToEmoji(iso)}
             </button>
-            <button className={css({ fontSize: '2xl' })} onClick={() => playAudio(`${frenchAudio}`)}>&#127467;&#127479;</button>
+            <button className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })} onClick={() => playAudio(`/audio/${frenchAudio}.mp3`)}>
+                {isoToEmoji('FR')}
+            </button>
             <Link href={nextPageNumber}>
                 {
                     isLastPage ?
