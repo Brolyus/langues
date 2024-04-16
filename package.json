@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "country-flag-emoji-polyfill": "^0.1.8",
+    "framer-motion": "^11.0.28",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18"

@@ -3,7 +3,8 @@ import { defineConfig, defineGlobalStyles } from "@pandacss/dev"
 const globalCss = defineGlobalStyles({
     'html, body': {
         height: "100%",
-        boxSizing: "border-box"
+        boxSizing: "border-box",
+        scrollSnapType: "y mandatory"
     },
     '#__next': {
         height: "100%"
