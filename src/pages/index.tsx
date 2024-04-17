@@ -4,6 +4,7 @@ import Image from 'next/image';
 import mainImage from '/public/images/home.jpg'
 import Link from 'next/link'
 import homeData from '../tools/homeData.json'
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
@@ -31,7 +32,20 @@ export default function Home() {
         <Image src={mainImage} alt='Image de couverture de loup noir' className={css({})} onClick={() => playAudio('/audio/.mp3')} />
       </div>
       {homeData?.map((element, index) => (
-        <p className={css({ scrollSnapAlign: 'center', color: `${index % 2 === 0 && 'mainBlack'}`, backgroundColor: `${index % 2 === 0 && 'mainWhite'}`, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', })} onClick={() => playAudio(`/audio/titles/title_${element.foreignLanguage}.wav`)} key={index}>{element.title}</p>
+        <div
+          className={css({ scrollSnapAlign: 'center', color: `${index % 2 === 0 && 'mainBlack'}`, backgroundColor: `${index % 2 === 0 && 'mainWhite'}`, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', })}
+          onClick={() => playAudio(`/audio/titles/title_${element.foreignLanguage}.wav`)}
+          key={index}
+        >
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className={css({ height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
+          >
+            {element.title}
+          </motion.p>
+        </div>
       ))
       }
       <Link href='/1' className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'secondGreen', fontSize: 'md', padding: '3', backgroundColor: 'mainGreen', width: '200px', border: '1px solid token(colors.mainGreen)', position: 'fixed', top: 'calc(100% - 100px)', zIndex: '10', borderRadius: '5px' })}>

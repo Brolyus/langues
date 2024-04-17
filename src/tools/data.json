@@ -62,7 +62,7 @@
         "text": ["Alex est perdu. Il est en train de regarder le ciel. Il vient de rentrer dans la forêt, il est sous les arbres. Derrière les arbres, il y a des yeux qui se cachent.", "Le loup est en train de l’observer.","Le loup est fâché. C’est le gardien de la forêt."],
         "foreignLanguage": "kabyl",
         "frenchAudio": "1.français",
-        "flag": "DZ"
+        "flag": "kabyle"
     },
     {
         "page":"6",
@@ -192,7 +192,7 @@
         "text": ["Ce n’est pas un loup mais Inou ! Il a sauvé Alex parce que l’arbre vient de tomber. Les branches sont éparpillées au sol."],
         "foreignLanguage": "catalan",
         "frenchAudio": "1.français",
-        "flag": "ES"
+        "flag": "catalan"
     },
     {
         "page":"16",

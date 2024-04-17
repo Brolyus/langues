@@ -4,7 +4,7 @@
         "foreignLanguage": "french"
     },
     {
-        "title": "schwarz wolf ",
+        "title": "Schwarz Wolf ",
         "foreignLanguage": "german"
     },
     {
@@ -24,7 +24,7 @@
         "foreignLanguage": "catalan"
     },
     {
-        "title": "Lobu negru",
+        "title": "Lobo preto",
         "foreignLanguage": "creol"
     },
     {
@@ -32,15 +32,15 @@
         "foreignLanguage": "spanish"
     },
     {
-        "title": "luppo nero",
+        "title": "Luppo nero",
         "foreignLanguage": "italian"
     },
     {
-        "title": "uccen avarkon",
-        "foreignLanguage": "kabyle"
+        "title": "Uccen avarkon",
+        "foreignLanguage": "kabyl"
     },
     {
-        "title": "wilk czarny",
+        "title": "Czarny wilk",
         "foreignLanguage": "polish"
     },
     {
@@ -52,19 +52,15 @@
         "foreignLanguage": "romanian"
     },
     {
-        "title": "varge svart",
+        "title": "Svart varge",
         "foreignLanguage": "swedish"
     },
     {
-        "title": "Lou",
-        "foreignLanguage": "takitaki"
-    },
-    {
-        "title": "madadh-allaidh dubh",
+        "title": "Mac tíre dubh",
         "foreignLanguage": "gaelic"
     },
     {
-        "title": "भेड़िया",
+        "title": "काला भेड़िया",
         "foreignLanguage": "hindi"
     }
 ]
