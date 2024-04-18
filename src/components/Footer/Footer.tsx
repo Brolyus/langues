@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill"
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface FooterProps {
     foreignLanguage: string
@@ -80,13 +81,23 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
     }, [])
 
     return (
-        <footer className={css({ backgroundColor: "mainWhite", height: "60px", display: "flex", justifyContent: "space-around", color: "mainBlack", borderTop: "1px solid token(colors.mainBlack)", alignItems: "center" })}>
+        <motion.footer className={css({ backgroundColor: "mainWhite", height: "60px", display: "flex", justifyContent: "space-around", color: "mainBlack", borderTop: "1px solid token(colors.mainBlack)", alignItems: "center" })}>
             <Link href={prevPageNumber}>
                 <Arrow className={css({ color: "mainBlack", fill: 'mainBlack', transform: 'scaleX(-1)' })} onClick={() => stopAudio()} />
             </Link>
-            <button className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })} onClick={() => playAudio(`/audio/${foreignLanguage}.mp3`)}>
-                {isoToEmoji(iso)}
-            </button>
+            <AnimatePresence mode="wait">
+                <motion.button
+                    key={iso}
+                    className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })}
+                    onClick={() => playAudio(`/audio/${foreignLanguage}.mp3`)}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ scale: 1.1, opacity: 1 }}
+                    exit={{ opacity: 0, scale: 1.5 }}
+                    transition={{ type: "spring", duration: 0.3 }}
+                >
+                    {isoToEmoji(iso)}
+                </motion.button>
+            </AnimatePresence>
             <button className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })} onClick={() => playAudio(`/audio/${frenchAudio}.mp3`)}>
                 {isoToEmoji('FR')}
             </button>
@@ -98,7 +109,7 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
                         <Arrow className={css({ color: "mainBlack", fill: 'mainBlack' })} onClick={() => stopAudio()} />
                 }
             </Link>
-        </footer>
+        </motion.footer >
     )
 }
 
