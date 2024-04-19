@@ -38,9 +38,9 @@ export default function Home() {
           key={index}
         >
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
             className={css({ height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
           >
             {element.title}

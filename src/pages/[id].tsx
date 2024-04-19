@@ -24,7 +24,8 @@ export default function Page(data: any) {
   return (
     <>
       <Layout
-        titleText={data.title}
+        key={data.page}
+        id={data.page}
         imgUrl={`/images/${data.image}`}
         alt={data.alt}
         text={data.text}
