@@ -17,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text }) => {
                 key={id + 'section'}
                 layout
                 layoutId='layout'
-                className={css({ zIndex: 0, fontFamily: "Arial", height: "calc(100% - 60px)", color: "black", display: "flex", alignItems: "center", padding: "5", flexDirection: "column", backgroundColor: 'white', position: 'relative', overflow: 'scroll' })}
+                className={css({ zIndex: 0, fontFamily: "Arial", height: "calc(100% - 60px)", color: "black", display: "flex", alignItems: "center", padding: "5", flexDirection: "column", backgroundColor: 'white', position: 'relative', overflow: 'auto', lg: { maxWidth: '860px', margin: 'auto' } })}
                 initial={{ opacity: 0.5, y: -40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: "spring", duration: 0.8 }}

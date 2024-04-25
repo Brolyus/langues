@@ -7,7 +7,8 @@ const globalCss = defineGlobalStyles({
         scrollSnapType: "y mandatory"
     },
     '#__next': {
-        height: "100%"
+        height: "100%",
+        lg:{backgroundColor: 'black'}
     }
 })
 
