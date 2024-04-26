@@ -33,7 +33,7 @@ export default function Page(data: any) {
       <Footer
         foreignLanguage={data.foreignLanguage}
         iso={data.flag}
-        frenchAudio={data.page}
+        frenchAudio={data.frenchAudio}
       />
     </>
   )

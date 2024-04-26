@@ -48,8 +48,8 @@ export default function Home() {
         </div>
       ))
       }
-      <Link href='/1' className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'secondGreen', fontSize: 'md', padding: '3', backgroundColor: 'mainGreen', width: '200px', border: '1px solid token(colors.mainGreen)', position: 'fixed', top: 'calc(100% - 100px)', zIndex: '10', borderRadius: '5px' })}>
-        <button onClick={() => stopAudio()}>Demarrer l&apos;histoire</button>
+      <Link href='/1' onClick={() => stopAudio()} className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'secondGreen', fontSize: 'md', padding: '3', backgroundColor: 'mainGreen', width: '200px', border: '1px solid token(colors.mainGreen)', position: 'fixed', top: 'calc(100% - 100px)', zIndex: '10', borderRadius: '5px' })}>
+        <button>Demarrer l&apos;histoire</button>
       </Link>
     </div>
   )
