@@ -85,19 +85,17 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
             <Link href={prevPageNumber}>
                 <Arrow className={css({ color: "mainBlack", fill: 'mainBlack', transform: 'scaleX(-1)' })} onClick={() => stopAudio()} />
             </Link>
-            <AnimatePresence mode="wait">
-                <motion.button
-                    key={iso}
-                    className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })}
-                    onClick={() => playAudio(`/audio/${foreignLanguage}.mp3`)}
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ opacity: 0, scale: 1.5 }}
-                    transition={{ type: "spring", duration: 0.4, bounce: 0.5 }}
-                >
-                    {isoToEmoji(iso)}
-                </motion.button>
-            </AnimatePresence>
+            <motion.button
+                key={iso + 'flag'}
+                className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })}
+                onClick={() => playAudio(`/audio/${foreignLanguage}.mp3`)}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ opacity: 0, scale: 1.5 }}
+                transition={{ type: "spring", duration: 0.4, bounce: 0.5 }}
+            >
+                {isoToEmoji(iso)}
+            </motion.button>
             <button className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })} onClick={() => playAudio(`/audio/${frenchAudio}.mp3`)}>
                 {isoToEmoji('FR')}
             </button>

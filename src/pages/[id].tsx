@@ -24,7 +24,6 @@ export default function Page(data: any) {
   return (
     <>
       <Layout
-        key={data.page}
         id={data.page}
         imgUrl={`/images/${data.image}`}
         imgUrl2={data.image2 && `/images/${data.image2}`}

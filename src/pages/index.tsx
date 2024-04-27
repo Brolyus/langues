@@ -35,12 +35,12 @@ export default function Home() {
         <div
           className={css({ scrollSnapAlign: 'center', color: `${index % 2 === 0 && 'mainBlack'}`, backgroundColor: `${index % 2 === 0 && 'mainWhite'}`, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', })}
           onClick={() => playAudio(`/audio/titles/title_${element.foreignLanguage}.wav`)}
-          key={index}
+          key={index + 'title'}
         >
           <motion.p
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ duration: 0.4 }}
             className={css({ height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
           >
             {element.title}
