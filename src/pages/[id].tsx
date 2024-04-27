@@ -27,6 +27,7 @@ export default function Page(data: any) {
         key={data.page}
         id={data.page}
         imgUrl={`/images/${data.image}`}
+        imgUrl2={data.image2 && `/images/${data.image2}`}
         alt={data.alt}
         text={data.text}
       />

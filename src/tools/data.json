@@ -92,8 +92,9 @@
     {
         "page":"10",
         "image": "8.jpg",
+        "image2": "9.jpg",
         "alt": "desc",
-        "title": "Espagnol 1",
+        "title": "Espagnol",
         "text": ["La chouette regarde le garçon avec des yeux méchants. C’est le soir et Alex dans la forêt fait du bruit. La chouette est fâchée contre lui parce que, à cause de lui, les animaux se sont échappés, ils ont eu peur, et la chouette n’a rien à manger.", "Alex continue de marcher. Il marche difficilement à cause de la neige. La neige tombe de plus en plus vite."],
         "foreignLanguage": "spanish",
         "frenchAudio": "10",

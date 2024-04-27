@@ -5,12 +5,13 @@ import { motion, AnimatePresence, stagger, LayoutGroup } from 'framer-motion';
 
 interface LayoutProps {
     imgUrl: string;
+    imgUrl2?: string;
     alt: string;
     text: Array<string>;
     id: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text }) => {
+const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text, imgUrl2 }) => {
     return (
         <AnimatePresence mode='popLayout'>
             <motion.section
@@ -26,6 +27,12 @@ const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text }) => {
                 <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} className={css({ marginTop: '20px' })}>
                     <Image src={imgUrl} width={300} height={300} alt={alt} />
                 </motion.div>
+                {
+                    imgUrl2 &&
+                    <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} className={css({ marginTop: '20px' })}>
+                        <Image src={imgUrl2} width={300} height={300} alt={alt} />
+                    </motion.div>
+                }
                 {text.map((element, id) => {
                     return <motion.p className={css({ backgroundColor: "white", padding: "5", borderRadius: "5", width: '100%' })} key={id}>{element}</motion.p>
                 })}
