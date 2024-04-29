@@ -55,7 +55,7 @@ export default function Home() {
             {element.title}
           </motion.p>
           <motion.span
-            className={css({ marginTop: '10px', fill: `${index % 2 !== 0 && 'mainWhite'}`, height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
+            className={css({ marginTop: '10px', fill: 'mainWhite', height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
@@ -65,10 +65,23 @@ export default function Home() {
         </div>
       ))
       }
-      <Link href='/1' onClick={() => stopAudio()} className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'secondGreen', fontSize: 'md', padding: '3', backgroundColor: 'mainGreen', width: '200px', border: '1px solid token(colors.mainGreen)', position: 'fixed', top: 'calc(100% - 100px)', zIndex: '10', borderRadius: '5px' })}>
-        <button>Demarrer l&apos;histoire</button>
-      </Link>
-      <ArrowComponent className={css({ position: 'fixed', right: '20px', top: 'calc(100% - 100px)', width: '40px', color: 'secondGreen', fill: 'mainGreen', backgroundColor: 'secondGreen', borderRadius: '50%', transform: 'rotate(90deg)' })} />
+      <motion.div
+        className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'secondGreen', fontSize: 'md', padding: '3', backgroundColor: 'mainGreen', width: '200px', border: '1px solid token(colors.mainGreen)', position: 'fixed', top: 'calc(100% - 100px)', zIndex: '10', borderRadius: '5px' })}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <Link href='/1' onClick={() => stopAudio()}>
+          <button>Demarrer l&apos;histoire</button>
+        </Link>
+      </motion.div>
+      <motion.div
+        className={css({ position: 'fixed', right: '20px', top: 'calc(100% - 96px)', width: '40px', color: 'secondGreen', fill: 'mainGreen', backgroundColor: 'secondGreen', borderRadius: '50%' })}
+        initial={{ y: -40 }}
+        animate={{ y: 0 }}
+        transition={{ type: 'spring', repeat: 2 }}
+      >
+        <ArrowComponent className={css({ transform: 'rotate(90deg)' })} />
+      </motion.div>
     </div>
   )
 }
