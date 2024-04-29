@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text, imgUrl2 }) => {
                         initial={{ scale: 0.8 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.5 }}
-                        className={css({ marginTop: '20px' })}>
+                        className={css({ marginTop: '20px', boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 8px' })}>
                         <Image src={imgUrl2} width={300} height={300} alt={alt} />
                     </motion.div>
                 }
