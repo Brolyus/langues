@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text, imgUrl2 }) => {
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className={css({ marginTop: '20px' })}>
+                    className={css({ marginTop: '20px', boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 8px' })}>
                     <Image src={imgUrl} width={300} height={300} alt={alt} />
                 </motion.div>
                 {
@@ -41,14 +41,19 @@ const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text, imgUrl2 }) => {
                         <Image src={imgUrl2} width={300} height={300} alt={alt} />
                     </motion.div>
                 }
-                {text.map((element, i) => {
-                    return <motion.p
-                        initial={{ opacity: 0, x: -40 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        exit={{ x: 40, opacity: 0 }}
-                        className={css({ padding: "5", borderRadius: "5", width: '100%' })}
-                        key={i + 'text'}>{element}</motion.p>
-                })}
+                <motion.div
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: 40, opacity: 0 }}
+                    className={css({ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 8px', marginTop: '20px' })}
+                >
+
+                    {text.map((element, i) => {
+                        return <motion.p
+                            className={css({ padding: "5", borderRadius: "5", width: '100%' })}
+                            key={i + 'text'}>{element}</motion.p>
+                    })}
+                </motion.div>
             </motion.section >
         </AnimatePresence>
     )
