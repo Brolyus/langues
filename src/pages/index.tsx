@@ -4,7 +4,7 @@ import Image from 'next/image';
 import mainImage from '/public/images/home.jpg'
 import Link from 'next/link'
 import homeData from '@/tools/homeData.json'
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import ArrowComponent from '@/components/Arrow/Arrow';
 import SoundComponent from '@/components/SoundComponent/SoundComponent';
 
@@ -67,7 +67,7 @@ export default function Home() {
         transition={{ type: 'spring' }}
       >
         <Link href='/1' onClick={() => stopAudio()}>
-          <button>Demarrer l&apos;histoire</button>
+          <button className={css({ cursor: 'pointer' })}>Demarrer l&apos;histoire</button>
         </Link>
       </motion.div>
       <motion.div
