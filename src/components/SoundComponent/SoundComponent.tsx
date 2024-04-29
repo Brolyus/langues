@@ -1,15 +1,14 @@
 import * as React from "react"
 
-function SvgComponent(props: any) {
+function SoundComponent(props: any) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="none"
             strokeWidth="1.5"
-            color="#000"
             viewBox="0 0 24 24"
+            {...props}
         >
             <path
                 stroke="#000"
@@ -25,4 +24,4 @@ function SvgComponent(props: any) {
     )
 }
 
-export default SvgComponent
+export default SoundComponent

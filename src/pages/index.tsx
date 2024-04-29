@@ -3,8 +3,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import mainImage from '/public/images/home.jpg'
 import Link from 'next/link'
-import homeData from '../tools/homeData.json'
+import homeData from '@/tools/homeData.json'
 import { motion } from 'framer-motion';
+import ArrowComponent from '@/components/Arrow/Arrow';
+import SoundComponent from '@/components/SoundComponent/SoundComponent';
 
 export default function Home() {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
@@ -33,24 +35,49 @@ export default function Home() {
       </div>
       {homeData?.map((element, index) => (
         <div
-          className={css({ scrollSnapAlign: 'center', color: `${index % 2 === 0 && 'mainBlack'}`, backgroundColor: `${index % 2 === 0 && 'mainWhite'}`, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', })}
+          className={css({ scrollSnapAlign: 'center', color: `${index % 2 === 0 && 'mainBlack'}`, backgroundColor: `${index % 2 === 0 && 'mainWhite'}`, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', flexDirection: 'column' })}
           onClick={() => playAudio(`/audio/titles/title_${element.foreignLanguage}.wav`)}
           key={index + 'title'}
         >
           <motion.p
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className={css({ height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
+            transition={{ duration: 0.8, type: 'spring' }}
+            whileHover={{ scale: 1.2 }}
+            className={css({ height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
           >
             {element.title}
           </motion.p>
+          <motion.span
+            className={css({ marginTop: '10px', fill: 'mainWhite', height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, type: 'spring' }}
+            whileHover={{ scale: 1.2 }}
+          >
+            <SoundComponent />
+          </motion.span>
         </div>
       ))
       }
-      <Link href='/1' onClick={() => stopAudio()} className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'secondGreen', fontSize: 'md', padding: '3', backgroundColor: 'mainGreen', width: '200px', border: '1px solid token(colors.mainGreen)', position: 'fixed', top: 'calc(100% - 100px)', zIndex: '10', borderRadius: '5px' })}>
-        <button>Demarrer l&apos;histoire</button>
-      </Link>
+      <motion.div
+        className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'secondGreen', fontSize: 'md', padding: '3', backgroundColor: 'mainGreen', width: '200px', border: '1px solid token(colors.mainGreen)', position: 'fixed', top: 'calc(100% - 100px)', zIndex: '10', borderRadius: '5px', cursor: 'pointer' })}
+        initial={{ opacity: 0, scale: 0.4 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ type: 'spring' }}
+      >
+        <Link href='/1' onClick={() => stopAudio()}>
+          <button className={css({ cursor: 'pointer' })}>Demarrer l&apos;histoire</button>
+        </Link>
+      </motion.div>
+      <motion.div
+        className={css({ position: 'fixed', right: '20px', top: 'calc(100% - 96px)', width: '40px', color: 'secondGreen', fill: 'mainGreen', backgroundColor: 'secondGreen', borderRadius: '50%' })}
+        initial={{ y: -40 }}
+        animate={{ y: 0 }}
+        transition={{ type: 'spring', repeatType: 'reverse', repeat: Infinity }}
+      >
+        <ArrowComponent className={css({ transform: 'rotate(90deg)' })} />
+      </motion.div>
     </div>
   )
 }

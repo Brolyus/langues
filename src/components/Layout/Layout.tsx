@@ -42,7 +42,12 @@ const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text, imgUrl2 }) => {
                     </motion.div>
                 }
                 {text.map((element, i) => {
-                    return <p className={css({ padding: "5", borderRadius: "5", width: '100%' })} key={i + 'text'}>{element}</p>
+                    return <motion.p
+                        initial={{ opacity: 0, x: -40 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: 40, opacity: 0 }}
+                        className={css({ padding: "5", borderRadius: "5", width: '100%' })}
+                        key={i + 'text'}>{element}</motion.p>
                 })}
             </motion.section >
         </AnimatePresence>

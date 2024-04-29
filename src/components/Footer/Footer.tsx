@@ -83,7 +83,7 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
     return (
         <motion.footer className={css({ position: 'relative', zIndex: 10, backgroundColor: "mainWhite", height: "60px", display: "flex", justifyContent: "space-around", color: "mainBlack", borderTop: "1px solid token(colors.mainBlack)", alignItems: "center", lg: { maxWidth: '860px', margin: 'auto' } })}>
             <Link href={prevPageNumber}>
-                <Arrow className={css({ color: "mainBlack", fill: 'mainBlack', transform: 'scaleX(-1)' })} onClick={() => stopAudio()} />
+                <Arrow className={css({ color: "mainBlack", fill: 'mainBlack', width: '20px', transform: 'rotate(180deg)' })} onClick={() => stopAudio()} />
             </Link>
             <motion.button
                 key={iso + 'flag'}
@@ -104,7 +104,7 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
                     isLastPage ?
                         <p>Fin</p>
                         :
-                        <Arrow className={css({ color: "mainBlack", fill: 'mainBlack' })} onClick={() => stopAudio()} />
+                        <Arrow className={css({ color: "mainBlack", fill: 'mainBlack', width: '20px' })} onClick={() => stopAudio()} />
                 }
             </Link>
         </motion.footer >
