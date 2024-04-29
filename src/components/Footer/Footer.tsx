@@ -102,7 +102,7 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
             <Link href={nextPageNumber}>
                 {
                     isLastPage ?
-                        <p>Fin</p>
+                        <p onClick={() => stopAudio()}>Fin</p>
                         :
                         <Arrow className={css({ color: "mainBlack", fill: 'mainBlack', width: '20px' })} onClick={() => stopAudio()} />
                 }
