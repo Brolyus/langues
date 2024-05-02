@@ -26,7 +26,7 @@ const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text, imgUrl2 }) => {
                     exit={{ opacity: 0.5, y: 40, scale: 0.8 }}
                     transition={{ duration: 0.8, type: 'spring' }}
                     className={css({ marginTop: '20px', boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 8px' })}>
-                    <Image src={imgUrl} width={300} height={300} alt={alt} />
+                    <Image src={imgUrl} width={300} priority height={300} alt={alt} />
                 </motion.div>
                 {
                     imgUrl2 &&
@@ -35,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({ id, imgUrl, alt, text, imgUrl2 }) => {
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.8, type: 'spring' }}
                         className={css({ marginTop: '20px', boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 8px' })}>
-                        <Image src={imgUrl2} width={300} height={300} alt={alt} />
+                        <Image src={imgUrl2} width={300} height={300} alt={alt} priority />
                     </motion.div>
                 }
                 <motion.div

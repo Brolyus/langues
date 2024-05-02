@@ -31,12 +31,12 @@ export default function Home() {
   return (
     <div className={css({ font: 'arial', flexDirection: 'column', alignItems: 'center', color: 'mainWhite', fontSize: "2xl", fontWeight: 'bold', backgroundColor: '#1f1e23', width: '100%', display: 'flex', justifyContent: 'space-around' })}>
       <div className={css({ scrollSnapAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' })}>
-        <Image src={mainImage} alt='Image de couverture de loup noir' className={css({})} onClick={() => playAudio('/audio/.mp3')} />
+        <Image src={mainImage} alt='Image de couverture de loup noir' className={css({})} priority />
       </div>
       {homeData?.map((element, index) => (
         <div
           className={css({ scrollSnapAlign: 'center', color: `${index % 2 === 0 && 'mainBlack'}`, backgroundColor: `${index % 2 === 0 && 'mainWhite'}`, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', flexDirection: 'column' })}
-          onClick={() => playAudio(`/audio/titles/title_${element.foreignLanguage}.wav`)}
+          onClick={() => playAudio(`/audio/titles/title_${element.foreignLanguage}.mp3`)}
           key={index + 'title'}
         >
           <motion.p
