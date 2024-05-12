@@ -34,7 +34,7 @@ export default function Home() {
     }, [])
 
     return (
-        <div className={css({ font: 'arial', flexDirection: 'column', alignItems: 'center', color: 'mainWhite', fontSize: "2xl", fontWeight: 'bold', backgroundColor: '#1f1e23', width: '100%', display: 'flex', justifyContent: 'space-around' })}>
+        <div className={css({ font: 'arial', flexDirection: 'column', alignItems: 'center', color: 'mainWhite', fontSize: "l", fontWeight: 'bold', backgroundColor: '#1f1e23', width: '100%', display: 'flex', justifyContent: 'space-around' })}>
             <div className={css({ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' })}>
                 <Image src={mainImage} alt='Image de couverture de loup noir' className={css({})} priority />
             </div>
@@ -61,8 +61,17 @@ export default function Home() {
                             whileHover={{ scale: 1.2 }}
                             className={css({ margin: '5px', fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })}
                         >
-                            {isoToEmoji('fr')}
+                            {isoToEmoji(element.code)}
                         </motion.span>
+                        <motion.p
+                            initial={{ opacity: 0, x: -40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, type: 'spring' }}
+                            whileHover={{ scale: 1.2 }}
+                            className={css({ height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '5px' })}
+                        >
+                            {element.name}
+                        </motion.p>
                         <motion.span
                             className={css({ margin: '5px', marginTop: '10px', fill: 'mainWhite', height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
                             initial={{ opacity: 0, x: 40 }}

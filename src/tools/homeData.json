@@ -1,62 +1,92 @@
 [
     {
         "title": "Schwarz Wolf ",
-        "foreignLanguage": "german"
+        "foreignLanguage": "german",
+        "code": "de",
+        "name": "allemand"
     },
     {
         "title": "Black wolf",
-        "foreignLanguage": "english"
+        "foreignLanguage": "english",
+        "code": "gb",
+        "name": "anglais"
     },
     {
         "title": "بئذ دوسأ",
-        "foreignLanguage": "arab"
+        "foreignLanguage": "arab",
+        "code": "dz",
+        "name": "arabe algérien"
     },
     {
         "title": "черен вълк",
-        "foreignLanguage": "bulgarian"
+        "foreignLanguage": "bulgarian",
+        "code": "bg",
+        "name": "bulgare"
     },
     {
         "title": "llop negra",
-        "foreignLanguage": "catalan"
+        "foreignLanguage": "catalan",
+        "code": "catalan",
+        "name": "catalan"
     },
     {
         "title": "Lobo preto",
-        "foreignLanguage": "creol"
+        "foreignLanguage": "creol",
+        "code": "cv",
+        "name": "créole cap-verdien"
     },
     {
         "title": "Lobo negro",
-        "foreignLanguage": "spanish"
+        "foreignLanguage": "spanish",
+        "code": "es",
+        "name": "espagnol"
     },
     {
         "title": "Luppo nero",
-        "foreignLanguage": "italian"
+        "foreignLanguage": "italian",
+        "code": "it",
+        "name": "italien"
     },
     {
         "title": "Uccen avarkon",
-        "foreignLanguage": "kabyl"
+        "foreignLanguage": "kabyl",
+        "code": "kabyle",
+        "name": "kabyle"
     },
     {
         "title": "Czarny wilk",
-        "foreignLanguage": "polish"
+        "foreignLanguage": "polish",
+        "code": "pl",
+        "name": "polonais"
     },
     {
         "title": "Lobo preto",
-        "foreignLanguage": "portuguese"
+        "foreignLanguage": "portuguese",
+        "code": "pt",
+        "name": "portugais"
     },
     {
         "title": "Lup negru",
-        "foreignLanguage": "romanian"
+        "foreignLanguage": "romanian",
+        "code": "ro",
+        "name": "roumain"
     },
     {
         "title": "Svart varge",
-        "foreignLanguage": "swedish"
+        "foreignLanguage": "swedish",
+        "code": "se",
+        "name": "suédois"
     },
     {
         "title": "Mae tíre dubh",
-        "foreignLanguage": "gaelic"
+        "foreignLanguage": "gaelic",
+        "code": "ie",
+        "name": "gaélique"
     },
     {
         "title": "काला भेड़िया",
-        "foreignLanguage": "hindi"
+        "foreignLanguage": "hindi",
+        "code": "in",
+        "name": "hindi"
     }
 ]
