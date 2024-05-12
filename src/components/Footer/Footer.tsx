@@ -88,7 +88,7 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
             <AnimatePresence mode="popLayout">
                 <motion.button
                     key={iso + 'flag'}
-                    className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })}
+                    className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl', cursor: 'pointer' })}
                     onClick={() => playAudio(`/audio/${foreignLanguage}.mp3`)}
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -98,7 +98,7 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
                     {isoToEmoji(iso)}
                 </motion.button>
             </AnimatePresence>
-            <button className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })} onClick={() => playAudio(`/audio/${frenchAudio}.mp3`)}>
+            <button className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl', cursor: 'pointer' })} onClick={() => playAudio(`/audio/${frenchAudio}.mp3`)}>
                 {isoToEmoji('FR')}
             </button>
             <Link href={nextPageNumber}>
