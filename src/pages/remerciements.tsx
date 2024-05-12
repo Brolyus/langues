@@ -13,19 +13,19 @@ export default function Thanks() {
     }, [])
     return (
         <>
-            <div className={css({ zIndex: 0, fontFamily: "Arial", height: "100%", display: "flex", alignItems: "center", padding: "5", flexDirection: "column", backgroundColor: '#DEE2E6', position: 'relative', overflow: 'auto', lg: { maxWidth: '860px', margin: 'auto' } })}>
-                <h2 className={css({ fontSize: '4xl', borderBottom: '1px solid black', marginBottom: '20px' })}>
-                    Remerciements
+            <div className={css({ zIndex: 0, fontFamily: "Arial", height: "100%", display: "flex", alignItems: "center", padding: "5", flexDirection: "column", backgroundColor: '#DEE2E6', position: 'relative', overflow: 'auto', lg: { maxWidth: '860px', margin: 'auto', padding: '0 100px' } })}>
+                <h2 className={css({ fontSize: '2xl', borderBottom: '1px solid black', marginBottom: '20px' })}>
+                    Texte écrit traduit et lu par:
                 </h2>
                 {thanksData?.map((element, index) => (
                     <section key={index} className={css({ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'flex-start', padding: '5px' })}>
-                        <p className={css({ fontSize: '2xl' })}>{element.author}</p>
+                        <p className={css({ fontSize: 'xl' })}>{element.author}</p>
                         <span className={css({ margin: '0 5px' })}>-</span>
                         <span className={css({ fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })}>
                             {isoToEmoji(element.flag)}
                         </span>
                         <span className={css({ margin: '0 5px' })}>-</span>
-                        <p className={css({ fontSize: '2xl' })}>{element.language}</p>
+                        <p className={css({ fontSize: '2xl', textTransform: 'lowercase' })}>{element.language}</p>
                     </section>
 
                 ))

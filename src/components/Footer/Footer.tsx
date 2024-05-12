@@ -27,7 +27,7 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
             nextPageNumber = '/1';
             break;
         case maxPageNumber:
-            nextPageNumber = '/';
+            nextPageNumber = '/remerciements';
             break;
         default:
             nextPageNumber = '/' + (currentPageNumber + 1);

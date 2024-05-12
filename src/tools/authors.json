@@ -10,34 +10,29 @@
         "language": "Italien"
     },
     {
-        "author": "William ?",
+        "author": "William",
         "flag": "ie",
         "language": "Gaélique"
     },
     {
         "author": "Adem",
         "flag": "dz",
-        "language": "Arabe"
+        "language": "arabe algérien"
     },
     {
         "author": "Yassine",
-        "flag": "dz",
-        "language": "Arabe"
-    },
-    {
-        "author": "Diana",
-        "flag": "dz",
-        "language": "Arabe"
+        "flag": "tn",
+        "language": "arabe tunisien"
     },
     {
         "author": "Hedaya",
         "flag": "dz",
-        "language": "Arabe"
+        "language": "arabe algérien"
     },
     {
         "author": "Abdelrahman",
         "flag": "dz",
-        "language": "Arabe"
+        "language": "arabe algérien"
     },
     {
         "author": "Maya",
@@ -55,9 +50,9 @@
         "language": "Kabyle"
     },
     {
-        "author": "Elisabeth ?",
+        "author": "Mme Lecroq",
         "flag": "in",
-        "language": "Indien"
+        "language": "Hindi"
     },
     {
         "author": "Hamza",
@@ -68,11 +63,6 @@
         "author": "Oskar",
         "flag": "pl",
         "language": "Polonais"
-    },
-    {
-        "author": "Salma",
-        "flag": "es",
-        "language": "Espagnol"
     },
     {
         "author": "Maryam",
@@ -90,7 +80,7 @@
         "language": "Portugais"
     },
     {
-        "author": "Nathalie ?",
+        "author": "Mme Neyrieux",
         "flag": "de",
         "language": "Allemand"
     },
@@ -102,12 +92,12 @@
     {
         "author": "Diana",
         "flag": "cv",
-        "language": "Capverdien"
+        "language": "Créole Cap-verdien"
     },
     {
         "author": "Diogo",
         "flag": "cv",
-        "language": "Capverdien"
+        "language": "Créole Cap-verdien"
     },
     {
         "author": "Maryam",
@@ -125,7 +115,7 @@
         "language": "Taki-taki"
     },
     {
-        "author": "Monsieur ?",
+        "author": "M. Guichard",
         "flag": "fr",
         "language": "Français"
     }
