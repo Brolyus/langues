@@ -29,7 +29,7 @@ export default function Thanks() {
                 ))
                 }
                 <Link href='/'>
-                    <button className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: 'xl', backgroundColor: 'white', borderRadius: '5px', padding: '3', width: '200px', marginTop: '50px' })}>
+                    <button className={css({ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 500, fontSize: 'xl', backgroundColor: 'white', borderRadius: '5px', padding: '3', width: '200px', marginTop: '50px', border: '1px solid black' })}>
                         Retour à l&apos;accueil
                     </button>
                 </Link>
