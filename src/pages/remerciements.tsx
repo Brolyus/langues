@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer/Footer';
 import { useEffect } from 'react';
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill';
 import { css } from '../../styled-system/css';
@@ -15,7 +14,7 @@ export default function Thanks() {
         <>
             <div className={css({ zIndex: 0, fontFamily: "Arial", height: "100%", display: "flex", alignItems: "center", padding: "5", flexDirection: "column", backgroundColor: '#DEE2E6', position: 'relative', overflow: 'auto', lg: { maxWidth: '860px', margin: 'auto', padding: '0 100px' } })}>
                 <h2 className={css({ fontSize: '2xl', borderBottom: '1px solid black', marginBottom: '20px' })}>
-                    Texte écrit traduit et lu par:
+                    Texte écrit, traduit et lu par:
                 </h2>
                 {thanksData?.map((element, index) => (
                     <section key={index} className={css({ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'flex-start', padding: '5px' })}>
