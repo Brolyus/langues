@@ -2,10 +2,10 @@ import { css } from '../../../styled-system/css'
 import { useState, useEffect } from 'react'
 import Arrow from '../Arrow/Arrow'
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill"
 import { motion, AnimatePresence } from 'framer-motion'
+import isoToEmoji from '@/tools/functions/isoToEmoji'
 
 interface FooterProps {
     foreignLanguage: string
@@ -62,18 +62,6 @@ const Footer: React.FC<FooterProps> = ({ foreignLanguage, iso, frenchAudio }) =>
             audio.pause();
             audio.currentTime = 0;
         }
-    }
-
-    const isoToEmoji = (isoCode: string) => {
-        if (isoCode === 'catalan' || isoCode === 'kabyle') {
-            const source = `/images/${isoCode}.png`
-            return <Image src={source} alt={`Icône drapeau ${isoCode}`} width={24} height={36} />
-        }
-        return isoCode
-            .split('')
-            .map(letter => letter.charCodeAt(0) % 32 + 0x1F1E5)
-            .map(n => String.fromCodePoint(n))
-            .join('')
     }
 
     useEffect(() => {
