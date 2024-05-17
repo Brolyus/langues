@@ -40,16 +40,17 @@ export default function Home() {
       </div>
       <section className={css({ width: '100%' })}>
         {homeData?.map((element, index) => (
-          <div
-            className={css({ color: 'maintWhite', backgroundColor: 'mainBlack', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' })}
+          <motion.div
+            className={css({ color: 'maintWhite', backgroundColor: 'mainBlack', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' })}
             onClick={() => playAudio(`/audio/titles/title_${element.foreignLanguage}.mp3`)}
             key={index + 'title'}
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: 'spring' }}
           >
             <motion.p
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, type: 'spring' }}
-              whileHover={{ scale: 1.2 }}
               className={css({ height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '5px' })}
             >
               {element.title}
@@ -58,7 +59,6 @@ export default function Home() {
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, type: 'spring' }}
-              whileHover={{ scale: 1.2 }}
               className={css({ margin: '5px', fontFamily: 'Twemoji Country Flags', fontSize: '2xl' })}
             >
               {isoToEmoji(element.code)}
@@ -67,7 +67,6 @@ export default function Home() {
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, type: 'spring' }}
-              whileHover={{ scale: 1.2 }}
               className={css({ height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '5px' })}
             >
               {element.name}
@@ -77,11 +76,10 @@ export default function Home() {
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, type: 'spring' }}
-              whileHover={{ scale: 1.2 }}
             >
               <SoundComponent />
             </motion.span>
-          </div>
+          </motion.div>
         ))
         }
       </section>
